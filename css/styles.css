@@ -1,0 +1,132 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* GENERAL STYLES */
+
+@font-face {
+  font-family: "sns"; /* Name it anything */
+  src: url(/assets/fonts/saintandsocial.otf) format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.heading-primary {
+  font-family: "sns";
+  font-size: 2.7rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+/* .image-placeholder, */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  /* background-color: gray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 1rem;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header p {
+  font-size: 18px;
+  font-style: italic;
+  max-width: 300px;
+}
+
+.image-placeholder {
+  display: flex;
+}
+
+.quote {
+  align-content: center;
+  font-family: "Caveat";
+  font-size: 2rem;
+  text-align: right;
+}
+
+.about-me {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.list-items a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.genres,
+.achievements,
+.inspiration,
+.cta,
+.intro {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
